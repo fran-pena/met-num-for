@@ -28,21 +28,21 @@ Pégaos na terminal co botón dereito do rato, escollendo **Pegar**. Acepta as o
 
 5. No cadro de busca da barra de tarefas de Windows, busca **Editar las variables de entorno del sistema** e ábrea.
 
-5. No cadro **Propiedades del sistema**, pulsa en **Variables de entorno**.
+6. No cadro **Propiedades del sistema**, pulsa en **Variables de entorno**.
 
 ![Propiedades del sistema](./images/propiedades_sistema.png)
 
-5. No cadro **Variables de entorno**, na sección **Variables del sistema**, escolle **Path** e pulsa en **Editar...**.
+7. No cadro **Variables de entorno**, na sección **Variables del sistema**, escolle **Path** e pulsa en **Editar...**.
 
 ![Cadro de variables de entorno](./images/cuadro_variables_entorno.png)
 
-5. No cadro **Editar variable de entorno**, pulsa en **Nuevo** e introduce a ruta de instalación do GFortran (por defecto, `C:\msys64\ucrt64\bin`).
+8. No cadro **Editar variable de entorno**, pulsa en **Nuevo** e introduce a ruta de instalación do GFortran (por defecto, `C:\msys64\ucrt64\bin`).
 
 ![Cadro de variables de entorno](./images/editar_variables_entorno.png)
 
-5. Para testar a instalación, vai ao cadro de busca da barra de tarefas de Windows, busca **CMD** ou **Símbolo del sistema** e ábreo.
+9. Para testar a instalación, vai ao cadro de busca da barra de tarefas de Windows, busca **CMD** ou **Símbolo del sistema** e ábreo.
 
-5. Copia e pega estes comandos no **Símbolo del sistema**. 
+10. Copia e pega estes comandos no **Símbolo del sistema**. 
 
 ```shell
 gfortran --version
