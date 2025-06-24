@@ -1,14 +1,8 @@
-# Docencia de métodos numéricos con Fortran
+# VS Code con GFortran en Windows
 
-## VS Code con GFortran en Windows
+## Exemplo 1: sen entrada
 
-### Instalación
-
-### Exemplos
-
-#### Exemplo 1: sen entrada
-
-##### Fontes
+### Fontes
 
 O ficheiro *hello_no_input.f90* non presenta entrada de datos:
 
@@ -23,7 +17,7 @@ program hello_no_input
 end program  
 ```
 
-##### Compilación
+### Compilación
 
 En *.vscode/tasks.json* se define a regra _compile_ no grupo _build_, que compila con argumentos:
 
@@ -33,7 +27,7 @@ En *.vscode/tasks.json* se define a regra _compile_ no grupo _build_, que compil
 
 Para saber como construir o executable con esta regra, consulta o [README](../README.md) da carpeta de exemplos.
 
-##### Execución
+### Depuración e execución
 
 En *.vscode/launch.json* se define a regra _debug_ para depuración e execución. Primeiro declara _compile_ como requisito:
 ```json

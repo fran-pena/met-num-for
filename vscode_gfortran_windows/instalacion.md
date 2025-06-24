@@ -1,11 +1,8 @@
-# Docencia de métodos numéricos con Fortran
+# VS Code con GFortran en Windows
 
-## VS Code con GFortran en Windows
+## Instalación
 
-### Instalación
-
-#### Instalación de Gfortran
-
+### Instalación de GFortran
 
 1. Vai á páxina [www.msys2.org](https://www.msys2.org/) e baixa o instalador.
 
@@ -53,7 +50,7 @@ Deberías ver unha saída semellante á seguinte:
 
 ![Comprobación desde CMD](./images/comprobacion_cmd.png)
 
-## Instalación de Visual Studio Code
+### Instalación de Visual Studio Code
 
 1. Vai á paxina de descarga de Visual Studio Code (VS Code): [code.visualstudio.com/download](https://code.visualstudio.com/download).
 

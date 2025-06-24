@@ -1,8 +1,7 @@
-# Docencia de métodos numéricos con Fortran
+# VS Code con GFortran en Windows
 
-## VS Code con GFortran en Windows
+## [Instalación](./instalacion.md)
 
-### [Instalación](./instalacion.md)
+## [Exemplos](./exemplos/README.md)
 
-### [Exemplos](./exemplos/README.md)
 
