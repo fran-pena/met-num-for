@@ -4,7 +4,7 @@
 
 ### Fontes
 
-O ficheiro *hello_no_input.f90* non presenta entrada de datos:
+O ficheiro [*hello_no_input.f90*](./hello_no_input.f90) non presenta entrada de datos:
 
 ```fortran
 program hello_no_input
@@ -19,7 +19,7 @@ end program
 
 ### Compilación
 
-En *.vscode/tasks.json* se define a regra _compile_ no grupo _build_, que compila con argumentos:
+En [*.vscode/tasks.json*](./.vscode/tasks.json) se define a regra _compile_ no grupo _build_, que compila con argumentos:
 
 ```json
 "args": ["-Wall", "-g", "-o", "a.exe", "hello_no_input.f90"]
@@ -29,7 +29,7 @@ Para saber como construir o executable con esta regra, consulta o [README](../RE
 
 ### Depuración e execución
 
-En *.vscode/launch.json* se define a regra _debug_ para depuración e execución. Primeiro declara _compile_ como requisito:
+En [*.vscode/launch.json*](./.vscode/launch.json) se define a regra _debug_ para depuración e execución. Primeiro declara _compile_ como requisito:
 ```json
 "preLaunchTask": "compile"
 ```
