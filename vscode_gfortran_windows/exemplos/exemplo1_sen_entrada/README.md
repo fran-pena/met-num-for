@@ -25,7 +25,7 @@ En *.vscode/tasks.json* se define a regra _compile_ no grupo _build_, que compil
 "args": ["-Wall", "-g", "-o", "a.exe", "hello_no_input.f90"]
 ```
 
-Para saber como construir o executable con esta regra, consulta o [README](../README.md) da carpeta de exemplos.
+Para saber como construir o executable con esta regra, consulta o [README](../README.md#compilacion) da carpeta de exemplos.
 
 ### Depuración e execución
 
@@ -38,4 +38,4 @@ Logo chama ao executable:
 "program": "${workspaceFolder}/a.exe"
 ```
 
-Para saber como depurar ou executar con esta regra, consulta o [README](../README.md) da carpeta de exemplos.
+Para saber como depurar ou executar con esta regra, consulta o [README](../README.md#depuracion-e-execucion) da carpeta de exemplos.
