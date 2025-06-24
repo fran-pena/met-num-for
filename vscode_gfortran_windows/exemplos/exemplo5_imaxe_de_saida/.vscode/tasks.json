@@ -1,0 +1,30 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label":   "compile",
+      "type":    "shell",
+      "command": "gfortran",
+      "args":   ["-Wall", "-g", "-o", "a.exe", "hello_graph.f90"],
+      "group":   "build",
+    },
+    {
+      "label":   "run",
+      "type":    "shell",
+      "command": "${workspaceFolder}/a.exe",
+      "args":   ["graph.png"],      
+      "group":   "test"
+    },
+    {
+      "label":      "run matlab",
+      "type":       "shell",
+      "command":    "matlab",
+      "args":      ["-batch", "output_graph"],
+      "dependsOn": ["run"],
+      "group": {
+          "kind": "test", 
+          "isDefault": true
+      },
+    }
+  ]
+}

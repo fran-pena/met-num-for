@@ -4,6 +4,14 @@
 
 ### [Exemplo 1: sen entrada](./exemplo1_sen_entrada/README.md)
 
+### [Exemplo 2: entrada interactiva](./exemplo2_entrada_interactiva/README.md)
+
+### [Exemplo 3: entrada redirixida](./exemplo3_entrada_redirixida/README.md)
+
+### [Exemplo 4: argumentos](./exemplo4_argumentos/README.md)
+
+### [Exemplo 5: imaxe de saída](./exemplo5_imaxe_de_saida/README.md)
+
 ### Descarga dos exemplos
 
 1. Vai á páxina principal deste repositorio en github: [https://github.com/fran-pena/met-num-for/](https://github.com/fran-pena/met-num-for/)

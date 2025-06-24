@@ -1,0 +1,15 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name":          "debug",
+      "type":          "cppdbg",
+      "request":       "launch",
+      "program":       "${workspaceFolder}/a.exe",
+      "cwd":           "${workspaceFolder}",
+      "args":         ["graph.png"],      
+      "MIMode":        "gdb",
+      "preLaunchTask": "compile",
+    }
+  ]
+}
