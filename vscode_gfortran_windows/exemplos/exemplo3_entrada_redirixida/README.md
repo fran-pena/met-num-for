@@ -41,7 +41,7 @@ Logo chama ao executable:
 ```json
 "program": "${workspaceFolder}/a.exe"
 ```
-Indicamos que a entrada do executable se redirixe ao ficheiro *data.txt*::
+Indicamos que a entrada do executable se redirixe ao ficheiro *data.txt*:
 ```json
 "args": ["<", "data.txt"]
 ```
