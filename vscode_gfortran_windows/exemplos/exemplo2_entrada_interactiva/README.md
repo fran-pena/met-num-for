@@ -4,7 +4,7 @@
 
 ### Fontes
 
-O ficheiro [*hello_read.f90*](./hello_read.f90) non presenta entrada de datos:
+O ficheiro [*hello_read.f90*](./hello_read.f90) solicita datos pola entrada estándar:
 
 ```fortran
 program hello_read
