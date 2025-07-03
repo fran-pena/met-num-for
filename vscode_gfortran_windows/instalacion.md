@@ -68,7 +68,7 @@ Deberías ver unha saída semellante á seguinte:
 
 ### Instalación de GNU Octave
 
-No caso de querer executar o [Exemplo 5](./exemplos/exemplo5_imaxe_de_saida/) e non dispoñer dunha instalaciónd e Matlab, pódese adaptar o exemplo a GNU Octave. Para instalalo, hai que seguir os pasos indicados na [Instalación de GFortran](./README#Instalación-de-GFfortran) e, no punto 4., engadir o seguinte comando a executar na terminal MSYS2 UCRT64:
+No caso de querer executar o [Exemplo 5](./exemplos/exemplo5_imaxe_de_saida/) e non dispoñer dunha instalación de Matlab, pódese adaptar o exemplo a GNU Octave. Para instalalo, hai que seguir os pasos indicados na [Instalación de GFortran](./README#Instalación-de-GFfortran) e, no punto 4., engadir o seguinte comando a executar na terminal MSYS2 UCRT64:
 
 ```shell
 pacman -S  mingw-w64-ucrt-x86_64-octave
