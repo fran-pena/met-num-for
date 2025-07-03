@@ -52,7 +52,7 @@ En [*.vscode/tasks.json*](./.vscode/tasks.json) se definen dúas regras no grupo
 "args":      ["-batch", "output_graph"],
 ```
 
-En caso de dispoñer do Octave, as liñas anteriores poden cambiarse por:
+En caso de dispoñer dunha instalación de GNU Octave, as liñas anteriores poden cambiarse por:
 
 ```json
 "command": "octave",
@@ -77,6 +77,8 @@ Declárase como a regra por defecto do grupo _test_:
 **Só é necesario executar a segunda regra _run graph_ para obter a imaxe de saída.**
 
 Para saber como executar con estas regras, consulta o [README](../README.md#Depuración-e-execución) da carpeta de exemplos.
+
+Para saber como instalar GNU Octave, consulta as [instruccións de instalación](../../instalacion.md#Instalación-de-GNU-Octave).
 
 ### Depuración
 

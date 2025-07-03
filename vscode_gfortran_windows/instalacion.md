@@ -64,3 +64,12 @@ Deberías ver unha saída semellante á seguinte:
 2. Abre VS Code, vai a **Extensions** na barra lateral esquerda (ou pulsa Ctrl + Mays + X) e  busca **Modern Fortran**. Na páxina que se abre, pulsar na roda dentada (ver frecha vermella na imaxe). Pulsa en **Instalar** e marca que confías na extensión.
 
 ![Extensión Modern Fortran](./images/modern_fortran.png)
+
+
+### Instalación de GNU Octave
+
+No caso de querer executar o [Exemplo 5](./exemplos/exemplo5_imaxe_de_saida/) e non dispoñer dunha instalaciónd e Matlab, pódese adaptar o exemplo a GNU Octave. Para instalalo, hai que seguir os pasos indicados na [Instalación de GFortran](./README#Instalación-de-GFfortran) e, no punto 4., engadir o seguinte comando a executar na terminal MSYS2 UCRT64:
+
+```shell
+pacman -S  mingw-w64-ucrt-x86_64-octave
+```
