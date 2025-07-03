@@ -6,7 +6,7 @@
       "type":    "shell",
       "command": "gfortran",
       "args":   ["-Wall", "-g", "-o", "a.exe", "hello_graph.f90"],
-      "group":   "build",
+      "group":   "build"
     },
     {
       "label":   "run",
@@ -18,13 +18,14 @@
     {
       "label":      "run graph",
       "type":       "shell",
-      "command":    "matlab", // "octave",
-      "args":      ["-batch", "output_graph"],  // ["-q", "--eval", "output_graph"]
+      "command":    "matlab", 
+      "args":      ["-batch", "output_graph"],
+      // Para GNU Octave usar: "command": "octave", "args": ["-q", "--eval", "output_graph"]
       "dependsOn": ["run"],
       "group": {
           "kind": "test", 
           "isDefault": true
-      },
+      }
     }
   ]
 }
