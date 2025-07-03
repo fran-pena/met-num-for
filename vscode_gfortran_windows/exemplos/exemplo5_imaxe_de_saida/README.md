@@ -1,20 +1,98 @@
-# Example with image output
+# VS Code con GFortran en Windows
 
-Please, be aware that:
+## Exemplo 5: imaxe de saída
 
-- File .f90 asks for an image filename via command line argument.
-- A Matlab file _output_graph.m_ is created.
-- Finalyy Matlab must be called to use _output_graph.m_ to create the image filename.
-- To get all the proccess done, rule _run matlab_ in _tasks.json_ mest be executed:
-  - Go to menu _Terminal - Run Task..._ (or press Ctrl + Shift + P, write _Tasks: Run Task_) and choose _run matlab_.
+### Fontes
 
-- Rule _run_ in _tasks.json_:
-  - Redirects the standard input: `"args": ["graph.png"]`;
-  - belongs to group _test_: `"group": "test"`.
+O ficheiro [*hello_graph.f90*](./hello_graph.f90) solicita o nome da imaxe de saída como argumento de liña de comando. Ademais, crea o ficheiro auxiliar *output_graph.m*:
 
-- Rule _run matlab_ in _tasks.json_:
-  - before anything else, calls the rule _run_: `"dependsOn": ["run"]`;
-  - calls Matlab: `"command": "matlab"`; 
-  - with arguments `"args": ["-batch", "output_graph"]`;
-  - belongs to group _test_: `"kind": "test"`;
-  - it is the default rule in that group: `"isDefault": true`.
+```fortran
+program hello_graph
+  implicit none
+  integer :: iu
+  character(255) :: file ! maximum path length in Windows API
+
+  call get_command_argument(1, file)
+  open(newunit=iu, file = 'output_graph.m', position='rewind')
+  write(iu,*) 'h = figure(''visible'',''off'');'
+
+  write(iu,*) 'x = [', [1, 4, 9, 16, 25], '];'
+  write(iu,*) 'y = [', [1, 2, 3,  4,  5], '];'
+  write(iu,*) 'plot(x,y)'
+  write(iu,*) 'saveas(h,''', trim(file), ''')'
+  close(iu)
+end program  
+```
+
+### Compilación
+
+En [*.vscode/tasks.json*](./.vscode/tasks.json) se define a regra _compile_ no grupo _build_, que compila con argumentos:
+
+```json
+"args":   ["-Wall", "-g", "-o", "a.exe", "hello_graph.f90"],
+```
+
+Para saber como construir o executable con esta regra, consulta o [README](../README.md#Compilación) da carpeta de exemplos.
+
+### Execución
+
+En [*.vscode/tasks.json*](./.vscode/tasks.json) se definen dúas regras no grupo _test_:
+
+1. A regra _run_ lanza o executable compilado do Fortran con argumento o ficheiro de imaxe de saída:
+
+```json
+"command": "${workspaceFolder}/a.exe",
+"args":   ["graph.png"],      
+```
+
+2. A regra _run graph_ lanza o Matlab para que, a partir de ficheiro auxiliar *output_graph.m*, xera a imaxe de saída:
+
+```json
+"command":    "matlab",
+"args":      ["-batch", "output_graph"],
+```
+
+En caso de dispoñer do Octave, as liñas anteriores poden cambiarse por:
+
+```json
+"command": "octave",
+"args":   ["-q", "--eval", "output_graph"]
+```
+
+Esta segunda regra executará antes a primeira:
+
+```json
+"dependsOn": ["run"],
+```
+
+Declárase como a regra por defecto do grupo _test_:
+
+```json
+"group": {
+    "kind": "test", 
+    "isDefault": true
+}
+```
+
+**Só é necesario executar a segunda regra _run graph_ para obter a imaxe de saída.**
+
+Para saber como executar con estas regras, consulta o [README](../README.md#Depuración-e-execución) da carpeta de exemplos.
+
+### Depuración
+
+En [*.vscode/launch.json*](./.vscode/launch.json) se define a regra _debug_ para depuración e execución. Primeiro declara _compile_ como requisito:
+```json
+"preLaunchTask": "compile"
+```
+Logo chama ao executable:
+```json
+"program": "${workspaceFolder}/a.exe"
+```
+Indicamos que a entrada do executable ten un argumento:
+```json
+"args": ["graph.png"],     
+```
+
+__A depuración só se aplica ao código *hello_graph.f90*.__
+
+Para saber como depurar ou executar con esta regra, consulta o [README](../README.md#Depuración-e-execución) da carpeta de exemplos.

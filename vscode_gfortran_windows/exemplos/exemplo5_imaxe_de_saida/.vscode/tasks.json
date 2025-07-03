@@ -16,10 +16,10 @@
       "group":   "test"
     },
     {
-      "label":      "run matlab",
+      "label":      "run graph",
       "type":       "shell",
-      "command":    "matlab",
-      "args":      ["-batch", "output_graph"],
+      "command":    "matlab", // "octave",
+      "args":      ["-batch", "output_graph"],  // ["-q", "--eval", "output_graph"]
       "dependsOn": ["run"],
       "group": {
           "kind": "test", 
